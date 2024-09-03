@@ -1,0 +1,256 @@
+.presentation_section{
+    position: relative;
+    min-height: 75dvh;
+}
+
+.bkg_image{
+    object-fit: cover;
+    filter: brightness(50%)
+}
+
+.presentation_text_section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 75%;
+    
+}
+
+.presentation_text_section{
+    color: white;
+    text-align: center;
+}
+
+.presentation_text_company_name{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.presentation_text_subtitle{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.presentation_text{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.to_services{
+    font-size: 12px;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.about_us_section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.about_us_section .text{
+    order: 2;
+    margin-top: 36px;
+}
+
+.about_us_section .text h3{
+    color: var(--main-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about_us_section .text p{
+    font-size: 12px;
+}
+
+.about_us_section .image{
+    order: 1;
+    margin: auto;
+}
+
+.about_us_section .image img{
+    max-width: 90%;
+    max-height: 300px;
+    box-shadow: 30px 30px 5px 0px rgba(246,101,5,1);
+}
+
+.why_us_presentation{
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+.why_us_presentation .title{
+    width: 100%;
+    color: var(--main-color);
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.why_us_presentation .image{
+    text-align: center;
+}
+
+.why_us_presentation .image img{
+    max-width: 90%;
+    max-height: 300px;
+    box-shadow: -30px -30px 5px 0px rgba(246,101,5,1);
+}
+
+.why_us_presentation .text_section{
+    margin-top: 20px;
+}
+
+.why_us_presentation .text_section .text_container{
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.why_us_presentation .text_section .text_container .icon_check{
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+.why_us_presentation .text_section .text_container .icon_check svg{
+    vertical-align: middle;
+}
+
+.why_us_presentation .text_section .text_container .text h3{
+    font-size: 16px;
+}
+
+.why_us_presentation .text_section .text_container .text p{
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 600px){
+    .presentation_text_company_name{
+        font-size: 36px;
+    }
+    
+    .presentation_text_subtitle{
+        font-size: 32px;
+    }
+    
+    .presentation_text{
+        font-size: 16px;
+    }
+
+    .to_services{
+        font-size: 16px;
+    }
+    
+    .about_us_section{
+        margin-top: 24px;
+    }
+}
+
+@media only screen and (min-width: 750px){
+    .about_us_section{
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .about_us_section .text{
+        order: 1;
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .about_us_section .text h3{
+        font-size: 32px;
+    }
+
+    .about_us_section .text p {
+        font-size: 16px;
+    }
+
+    .about_us_section .image{
+        order: 2;
+        flex: 1;
+    }
+    
+    .about_us_section .image img{
+        max-width: 95%;
+        max-height: unset;
+    }
+
+    .why_us_presentation{
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .why_us_presentation .title{
+        font-size: 32px;
+    }
+
+    .why_us_presentation .image{
+        flex: 1;
+    }
+
+    .why_us_presentation .text_section{
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .why_us_presentation .text_section .text_container .icon_check{
+        font-size: 32px;
+    }
+
+    .why_us_presentation .text_section .text_container .text h3{
+        font-size: 24px;
+    }
+
+    .why_us_presentation .text_section .text_container .text p{
+        font-size: 16px;
+    }
+
+    .why_us_presentation .image img{
+        max-width: 95%;
+        max-height: unset;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .presentation_text_company_name{
+        font-size: 5rem;
+        margin-bottom: 20px;
+    }
+    
+    .presentation_text_subtitle{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .presentation_text{
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .why_us_presentation{
+        max-width: 1200px;
+        margin: 75px auto;
+    }
+
+    .about_us_section{
+        max-width: 1200px;
+        margin: 30px auto;
+    }
+
+    .about_us_section .image img{
+        width: 95%;
+    }
+}

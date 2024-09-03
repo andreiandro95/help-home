@@ -1,0 +1,23 @@
+.input-element{
+    margin-bottom: 12px;
+}
+
+.label{
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.input{
+    border: none;
+    border-bottom: 1px solid #a4a4a4;
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 4px;
+}
+
+.input:focus{
+    outline: 1px solid #a4a4a4;
+}

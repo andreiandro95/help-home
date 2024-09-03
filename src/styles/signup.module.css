@@ -1,0 +1,80 @@
+.sign-up-page{
+    background: linear-gradient(135deg, #336699 0%, rgba(246, 101, 5, 0.5) 100%);
+    height: calc(100dvh - 90px);
+    position: relative;
+}
+
+.sign-up-element{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(247, 253, 253);
+    min-width: 90%;
+    min-height: 80%;
+    border-radius: 10px;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.sign-up-title{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.sign-up-form{
+    padding: 0 10px;
+}
+
+.sign-up-button{
+    background: linear-gradient(135deg, #fce9e2 0%, #e3f0f9 100%);
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    border: 1px solid #a4a4a4;;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.sign-up-paragraph{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: auto;
+    margin-bottom: 16px;
+}
+
+.sign-up-url{
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 550px) {
+    .sign-up-element{
+        min-width: 70%;
+    }
+
+    .sign-up-form{
+        padding: 0 24px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .sign-up-element{
+        min-width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .sign-up-element{
+        min-width: 40%;
+    }
+}

@@ -20,8 +20,8 @@ datasource db {
 }
 
 enum Role {
-  PROFESIONIST
-  CLIENT
+  PROVIDER 
+  CUSTOMER
 }
 
 model User {

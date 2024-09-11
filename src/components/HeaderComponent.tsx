@@ -26,6 +26,7 @@ const HeaderComponent = () => {
         </button>
         <Link
           className={`${styles.link} ${router === "/" && styles.link_active}`}
+          onClick={() => setMenuOpen(false)}
           href={"/"}
           title="Homepage"
         >
@@ -35,6 +36,7 @@ const HeaderComponent = () => {
           className={`${styles.link} ${
             router === "/servicii" && styles.link_active
           }`}
+          onClick={() => setMenuOpen(false)}
           href={"/servicii"}
           title="Servicii"
         >
@@ -44,6 +46,7 @@ const HeaderComponent = () => {
           className={`${styles.link} ${
             router === "/despre-noi" && styles.link_active
           }`}
+          onClick={() => setMenuOpen(false)}
           href={"/despre-noi"}
           title="Despre noi"
         >
@@ -53,6 +56,7 @@ const HeaderComponent = () => {
           className={`${styles.link} ${
             router === "/contact" && styles.link_active
           }`}
+          onClick={() => setMenuOpen(false)}
           href={"/contact"}
           title="Contact"
         >
@@ -60,8 +64,9 @@ const HeaderComponent = () => {
         </Link>
         <Link
           className={`${styles.link} ${
-            router === "/autentificare" && styles.link_active
+            router === "/sign-in" && styles.link_active
           }`}
+          onClick={() => setMenuOpen(false)}
           href={"/sign-in"}
           title="Autentificare"
         >

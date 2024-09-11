@@ -4,7 +4,7 @@ import styles from "@/styles/components/shareInput.module.css";
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   label: string;
   error?: string;
-  register?: any;
+  register: any;
   name: string;
   type: string;
 };
@@ -22,7 +22,12 @@ const ShareInput = ({
       <label htmlFor={name} className={styles.label}>
         {label}
       </label>
-      <input type={type} {...rest} className={styles.input} />
+      <input
+        className={styles.input}
+        type={type}
+        {...register(name)}
+        {...rest}
+      />
       {error && <p className={styles["input-error"]}>{error}</p>}
     </div>
   );

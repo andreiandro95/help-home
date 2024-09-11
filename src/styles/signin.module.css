@@ -13,7 +13,7 @@
     min-width: 90%;
     min-height: 80%;
     border-radius: 10px;
-    padding: 30px 10px;
+    padding: 20px 10px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 8px 6px -6px black;
@@ -21,8 +21,8 @@
 
 .sign-in-title{
     text-align: center;
-    margin-bottom: 25px;
-    font-size: 2rem;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 .sign-in-form{

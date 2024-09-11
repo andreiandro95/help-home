@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import HeaderComponent from "@/components/HeaderComponent";
+import Providers from "@/components/reactQuery/Provider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Session from "@/context/NextAuthContext/SessionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <HeaderComponent />
-        {children}
+        <Session>
+          <ToastContainer position="top-center" />
+          <Providers>
+            <HeaderComponent />
+            {children}
+          </Providers>
+        </Session>
       </body>
     </html>
   );

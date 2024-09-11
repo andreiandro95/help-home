@@ -2,7 +2,7 @@ import styles from "@/styles/signin.module.css";
 import SignInForm from "./components/SignInForm";
 import Link from "next/link";
 
-export default function Page() {
+export default async function Page() {
   return (
     <div className={styles["sign-in-page"]}>
       <div className={styles["sign-in-element"]}>

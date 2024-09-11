@@ -27,7 +27,7 @@ const SignInForm = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<FormElements>({
     resolver: zodResolver(schema),
   });
@@ -75,8 +75,12 @@ const SignInForm = () => {
         register={register}
         error={errors.password?.message}
       />
-      <button className={styles["sign-in-button"]} type="submit">
-        Sign in
+      <button
+        disabled={isSubmitting}
+        className={styles["sign-in-button"]}
+        type="submit"
+      >
+        {isSubmitting ? "Loading..." : "Sign in"}
       </button>
     </form>
   );

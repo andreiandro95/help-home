@@ -23,12 +23,12 @@
 }
 
 .presentation_text_company_name{
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
 .presentation_text_subtitle{
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -137,15 +137,15 @@
 
 @media only screen and (min-width: 600px){
     .presentation_text_company_name{
-        font-size: 36px;
+        font-size: 28px;
     }
     
     .presentation_text_subtitle{
-        font-size: 32px;
+        font-size: 16px;
     }
     
     .presentation_text{
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .to_services{
@@ -170,7 +170,7 @@
     }
 
     .about_us_section .text h3{
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .about_us_section .text p {
@@ -226,17 +226,17 @@
 
 @media only screen and (min-width: 1024px){
     .presentation_text_company_name{
-        font-size: 5rem;
+        font-size: 32px;
         margin-bottom: 20px;
     }
     
     .presentation_text_subtitle{
-        font-size: 2rem;
+        font-size: 16px;
         margin-bottom: 20px;
     }
     
     .presentation_text{
-        font-size: 1rem;
+        font-size: 14px;
         margin-bottom: 10px;
     }
 

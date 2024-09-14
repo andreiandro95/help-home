@@ -16,7 +16,7 @@ type SignUpFormElements = {
   name: string;
   password: string;
   repeatPassword: string;
-  role: "PROVIDER" | "CUSTOMER";
+  role: "FURNIZOR" | "CLIENT";
 };
 
 const passwordValidation = new RegExp(
@@ -25,26 +25,26 @@ const passwordValidation = new RegExp(
 
 export const signUpSchema = z
   .object({
-    email: z.string().email("Invalid email address"),
-    name: z.string().min(1, "Name is required"),
+    email: z.string().email("Adresă de e-mail nevalidă"),
+    name: z.string().min(1, "Numele este obligatoriu"),
     password: z
       .string()
-      .min(8, "Password must be 8 characters long")
+      .min(8, "Parola trebuie să aibă cel puțin 8 caractere")
       .regex(passwordValidation, {
         message:
-          "Your password is not valid: require at least one uppercase letter, one lowercase letter, one number and one special character",
+          "Parola dumneavoastră nu este validă: este necesar să conțină cel puțin o literă mare, o literă mică, un număr și un caracter special.",
       }),
     repeatPassword: z
       .string()
-      .min(8, "Repeat password must be at least 6 characters"),
-    role: z.enum(["PROVIDER", "CUSTOMER"], {
+      .min(8, "Repetearea parolei trebuie să aibă cel puțin 8 caractere"),
+    role: z.enum(["FURNIZOR", "CLIENT"], {
       errorMap: (issue, ctx) => {
-        return { message: "Please select your user type" };
+        return { message: "Vă rugăm să selectați tipul de utilizator." };
       },
     }),
   })
   .refine((data) => data.password === data.repeatPassword, {
-    message: "Passwords must match",
+    message: "Parolele trebuie să se potrivească.",
     path: ["repeatPassword"],
   });
 
@@ -57,14 +57,14 @@ const SignUpForm = () => {
     },
     onError: (error) => {
       if (error.message.includes("409")) {
-        toast.error("Account already exists");
+        toast.error("Contul există deja.");
       } else {
-        toast.error("Something happen. Try again later");
+        toast.error("S-a întâmplat ceva. Încercați din nou mai târziu.");
       }
     },
     onSuccess: (data) => {
       if (data.status === 200) {
-        toast.success("Account created succesfully");
+        toast.success("„Cont creat cu succes");
         router.refresh();
         reset();
       }
@@ -89,31 +89,31 @@ const SignUpForm = () => {
         label="E-mail*"
         name="email"
         type="text"
-        placeholder="E-mail address"
+        placeholder="Adresă e-mail"
         register={register}
         error={errors.email?.message}
       />
       <ShareInput
-        label="Password*"
+        label="Parolă*"
         name="password"
         type="password"
-        placeholder="Password"
+        placeholder="Parolă"
         register={register}
         error={errors.password?.message}
       />
       <ShareInput
-        label="Repeat password*"
+        label="Repetă parola*"
         name="repeatPassword"
         type="password"
-        placeholder="Repeat password"
+        placeholder="Repetă parola"
         register={register}
         error={errors.repeatPassword?.message}
       />
       <ShareInput
-        label="Name*"
+        label="Nume*"
         name="name"
         type="text"
-        placeholder="Name"
+        placeholder="Nume"
         register={register}
         error={errors.name?.message}
       />
@@ -126,9 +126,9 @@ const SignUpForm = () => {
           id="role"
           className={styles["select-role"]}
         >
-          <option value="">Select your role</option>
-          <option value="PROVIDER">Service provider</option>
-          <option value="CUSTOMER">Customer</option>
+          <option value="">Selectează rolul tău</option>
+          <option value="FURNIZOR">Furnizor de servicii</option>
+          <option value="CLIENT">Client</option>
         </select>
         {errors.role && (
           <p className={styles["select-error"]}>{errors.role.message}</p>
@@ -139,7 +139,7 @@ const SignUpForm = () => {
         type="submit"
         disabled={isPending}
       >
-        {isPending ? "Loading..." : "Sign up"}
+        {isPending ? "Încărcare..." : "Înregistrează-te"}
       </button>
     </form>
   );

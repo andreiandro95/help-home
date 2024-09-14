@@ -9,7 +9,10 @@
 
 .logo_image_container{
     z-index: 10;
-    height: 60px;
+    height: 75px;
+}
+.logo_image_container img{
+    border-radius: 20px;
 }
 
 .navigation{

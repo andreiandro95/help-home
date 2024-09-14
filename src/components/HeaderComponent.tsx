@@ -15,7 +15,9 @@ const HeaderComponent = () => {
   return (
     <header className={styles.header}>
       <h1 className={styles.logo_image_container}>
-        <Image src={`/logo.png`} alt="logo" width={75} height={60} />
+        <Link href={"/"}>
+          <Image src={`/logo.png`} alt="logo" width={75} height={75} />
+        </Link>
       </h1>
       <nav className={`${styles.navigation} ${menuOpen ? styles.active : ""}`}>
         <button
@@ -28,9 +30,9 @@ const HeaderComponent = () => {
           className={`${styles.link} ${router === "/" && styles.link_active}`}
           onClick={() => setMenuOpen(false)}
           href={"/"}
-          title="Homepage"
+          title="Pagina principală"
         >
-          Homepage
+          Pagina principală
         </Link>
         <Link
           className={`${styles.link} ${

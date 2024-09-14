@@ -11,8 +11,8 @@ import { signIn } from "next-auth/react";
 import { toast } from "react-toastify";
 
 const schema = z.object({
-  email: z.string().email("Invalid email address"),
-  password: z.string().min(1, "Password is required"),
+  email: z.string().email("Adresă de e-mail nevalidă"),
+  password: z.string().min(1, "Parola este necesară"),
 });
 
 type FormElements = {
@@ -44,12 +44,12 @@ const SignInForm = () => {
       });
 
       if (!res?.ok && res?.error === "CredentialsSignin") {
-        toast.error("Incorrect user");
+        toast.error("Utilizator incorect");
         reset();
       }
 
       if (res?.ok && res.url) {
-        toast.success("You are now logged in");
+        toast.success("Acum sunteți autentificat");
         router.push(res.url);
       }
     } catch (error) {
@@ -63,15 +63,15 @@ const SignInForm = () => {
         label="E-mail"
         name="email"
         type="text"
-        placeholder="E-mail address"
+        placeholder="Adresă e-mail"
         register={register}
         error={errors.email?.message}
       />
       <ShareInput
-        label="Password"
+        label="Parola"
         name="password"
         type="password"
-        placeholder="Password"
+        placeholder="Parola"
         register={register}
         error={errors.password?.message}
       />
@@ -80,7 +80,7 @@ const SignInForm = () => {
         className={styles["sign-in-button"]}
         type="submit"
       >
-        {isSubmitting ? "Loading..." : "Sign in"}
+        {isSubmitting ? "Încărcare..." : "Conectare"}
       </button>
     </form>
   );

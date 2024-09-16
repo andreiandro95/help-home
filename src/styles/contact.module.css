@@ -1,0 +1,93 @@
+.contact-page{
+    padding: 20px 10px 0;
+}
+.contact-title{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contact-form-section{
+    margin-bottom: 30px;
+}
+.contact-form-title{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+.form-contact input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #a4a4a4;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 4px;
+    background-color: white;
+}
+.form-contact textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #a4a4a4;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 4px;
+    background-color: white;
+    min-height: 100px;
+}
+.form-contact input[type="submit"]{
+    background: linear-gradient(135deg, #fce9e2 0%, #e3f0f9 100%);
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    border: 1px solid #a4a4a4;;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.faq-section{
+    margin-bottom: 30px;
+}
+.faq-section-title{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+.faq-section-presentation{
+    font-size: 12px;    
+    margin-bottom: 10px;
+}
+.faq-section-presentation h4{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px){
+    .contact-form-section, .faq-section{
+        max-width: 90%;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 700px){
+    .contact-form-section, .faq-section{
+        max-width: 70%;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .contact-form-section, .faq-section{
+        max-width: 1000px;
+        margin: auto;
+    }
+    .form-contact input, .form-contact textarea{
+        max-width: 700px;
+        margin: auto;
+    }
+}

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { toast } from "react-toastify";
+import styles from "@/styles/contact.module.css";
 
 const SendContactEmailForm = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -29,7 +30,7 @@ const SendContactEmailForm = () => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles["form-contact"]}>
         <input type="text" name="subject" placeholder="Subiect" required />
         <input type="text" name="name" placeholder="Nume" required />
         <input type="email" name="email" placeholder="Adresă e-mail" required />

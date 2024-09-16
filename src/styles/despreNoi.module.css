@@ -1,0 +1,144 @@
+.despre-noi-page{
+    padding: 20px 10px 0;
+}
+.despre-noi-title{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.despre-noi-presentation{
+    font-size: 12px;    
+    margin-bottom: 10px;
+}
+.despre-noi-images-container{
+    margin-bottom: 30px;
+}
+.despre-noi-images-container img{
+    width: 100%;
+    margin-bottom: 4px;
+    border: 1px solid var(--main-color);
+}
+.our-mission-title{
+    color: var(--main-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.our-mission-presentation{
+    font-size: 12px;    
+    margin-bottom: 10px;
+}
+.our-mission-img{ 
+    margin-bottom: 30px;
+}
+.our-mission-img img{
+    width: 100%;
+    box-shadow: 30px 30px 5px 0px rgba(246,101,5,1);
+}
+.our-vission-title{
+    color: var(--main-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.our-vission-presentation{
+    font-size: 12px;    
+    margin-bottom: 10px;
+}
+.our-vission-img{
+    margin-bottom: 30px;
+}
+.our-vission-img img{
+    width: 100%;
+    box-shadow: -30px 30px 5px 0px rgba(246,101,5,1);
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px){
+    .despre-noi-section, .our-mission-section, .our-vission-section{
+        max-width: 90%;
+        margin: auto;
+    }
+    .despre-noi-images-container{
+        text-align: center;
+    }
+    .despre-noi-images-container img{
+        max-width: 320px;
+        margin-bottom: 4;
+    }
+    .our-mission-img{
+        text-align: center;
+    }
+    .our-mission-img img{
+        max-width: 320px;
+    }
+    .our-vission-img{
+        text-align: center;
+    }
+    .our-vission-img img{
+        max-width: 320px;
+    }
+}
+@media only screen and (min-width: 700px){
+    .despre-noi-section, .our-mission-section, .our-vission-section{
+        max-width: 70%;
+        margin: auto;
+    }
+    .despre-noi-images-container{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        grid-template-rows: auto;
+    }
+    .despre-noi-images-container img:first-of-type{
+        grid-column: 1 / -1; 
+    }
+    .despre-noi-images-container img{
+        max-width: 320px;
+        margin: auto;
+    }
+    .our-mission-img{
+        text-align: center;
+    }
+    .our-mission-img img{
+        max-width: 320px;
+    }
+    .our-vission-img{
+        text-align: center;
+    }
+    .our-vission-img img{
+        max-width: 320px;
+    }
+}
+@media only screen and (min-width: 1000px){
+    .our-mission-section, .our-vission-section{
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .our-mission-title, .our-vission-title{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .our-mission-presentation, .our-mission-img, .our-vission-presentation, .our-vission-img{
+        flex: 1;
+    }
+    .our-vission-presentation{
+        order: 2;
+    }
+    .despre-noi-title{
+        font-size: 32px;
+    }
+    .our-mission-title, .our-vission-title{
+        font-size: 28px;
+    }
+    .despre-noi-presentation, .our-mission-presentation, .our-vission-presentation{
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .despre-noi-section, .our-mission-section, .our-vission-section{
+        max-width: 1000px;
+        margin: auto;
+    }
+}

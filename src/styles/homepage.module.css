@@ -104,7 +104,7 @@
 .why_us_presentation .image img{
     max-width: 90%;
     max-height: 300px;
-    box-shadow: -30px -30px 5px 0px rgba(246,101,5,1);
+    box-shadow: -30px 30px 5px 0px rgba(246,101,5,1);
 }
 
 .why_us_presentation .text_section{

@@ -7,10 +7,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import styles from "./../styles/components/header.module.css";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 const HeaderComponent = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = usePathname();
+  const { data: session } = useSession();
 
   return (
     <header className={styles.header}>
@@ -64,16 +66,29 @@ const HeaderComponent = () => {
         >
           Contact
         </Link>
-        <Link
-          className={`${styles.link} ${
-            router === "/sign-in" && styles.link_active
-          }`}
-          onClick={() => setMenuOpen(false)}
-          href={"/sign-in"}
-          title="Autentificare"
-        >
-          Autentificare
-        </Link>
+        {session?.user ? (
+          <Link
+            className={`${styles.link} ${
+              router === "/sign-in" && styles.link_active
+            }`}
+            onClick={() => setMenuOpen(false)}
+            href={"/cont"}
+            title="Autentificare"
+          >
+            Cont
+          </Link>
+        ) : (
+          <Link
+            className={`${styles.link} ${
+              router === "/sign-in" && styles.link_active
+            }`}
+            onClick={() => setMenuOpen(false)}
+            href={"/sign-in"}
+            title="Autentificare"
+          >
+            Autentificare
+          </Link>
+        )}
       </nav>
       <button
         className={styles.open_menu_mobile}
